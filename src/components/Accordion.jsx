@@ -5,11 +5,7 @@ export default function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const handleClick = (nextIndex) => {
-    console.log("Stale index", expandedIndex);
-
     setExpandedIndex((currentIndex) => {
-      console.log("Latest index", expandedIndex);
-
       if (currentIndex === nextIndex) {
         return -1;
       } else {
